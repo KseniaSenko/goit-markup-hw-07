@@ -15,42 +15,158 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
   </head>
   <body>
     <!-- header section -->
     <header class="line">
       <div class="container">
         <div class="navigation">
-          <a href="./index.html" class="logo nav-logo"
-            ><span class="web">web</span>studio</a
-          >
-          <nav>
-            <ul class="list nav-list">
-              <li class="nav-link">
-                <a class="link" href="./index.html">Studio</a>
+          <div class="nav-mobile">
+            <a href="./index.html" class="logo nav-logo"
+              ><span class="web">web</span>studio</a
+            >
+            <button
+              type="button"
+              class="nav-btn"
+              aria-controls="menu-container"
+              aria-expanded="false"
+              js-menu-container
+              js-open-menu
+            >
+              <svg class="nav-icon" width="40" height="30">
+                <use href="./images/svg/sprite.svg#icon-menu"></use>
+              </svg>
+            </button>
+          </div>
+          <!-- Mobile menu -->
+          <div class="nav-header" id="menu-container" js-container-dropdown>
+            <button
+              type="button"
+              class="modal-button button-close"
+              aria-lebel="Mobile menu switch"
+              js-close-menu
+            >
+              <svg width="8px" height="8px">
+                <use href="./images/svg/sprite.svg#close-icon"></use>
+              </svg>
+            </button>
+            <div class="nav-mob-menu">
+              <nav class="nav-item">
+                <ul class="list nav-list">
+                  <li class="nav-link">
+                    <a class="link" href="./index.html">Studio</a>
+                  </li>
+                  <li class="nav-link">
+                    <a class="link link-fixed" href="./portfolio.html"
+                      >Portfolio</a
+                    >
+                  </li>
+                  <li class="nav-link">
+                    <a class="link" href="">Contacts</a>
+                  </li>
+                </ul>
+              </nav>
+              <ul class="list list-contacts">
+                <li class="nav-contacts nav-tel">
+                  <a class="link nav-link" href="tel:+110001111111"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+                <li class="nav-contacts nav-mail">
+                  <a class="link nav-link" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <ul class="list team-icon-list nav-icon">
+                  <li>
+                    <a
+                      href="https://www.instagram.com/"
+                      class="team-link nav-icon-list"
+                      aria-label="Instagram"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="team-icon-svg" width="24px" height="24px">
+                        <use
+                          href="./images/svg/sprite.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://twitter.com/"
+                      class="team-link nav-icon-list"
+                      aria-label="Twitter"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="team-icon-svg" width="24px" height="24px">
+                        <use href="./images/svg/sprite.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.facebook.com/"
+                      class="team-link nav-icon-list"
+                      aria-label="Facebook"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="team-icon-svg" width="24px" height="24px">
+                        <use href="./images/svg/sprite.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/"
+                      class="team-link nav-icon-list"
+                      aria-label="Linkedin"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="team-icon-svg" width="24px" height="24px">
+                        <use href="./images/svg/sprite.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+          </div>
+          <!-- tablet/desktop menu -->
+          <div class="tab-menu">
+            <nav class="nav-item">
+              <ul class="list nav-list">
+                <li class="nav-link">
+                  <a class="link" href="./index.html">Studio</a>
+                </li>
+                <li class="nav-link">
+                  <a class="link link-fixed" href="./portfolio.html"
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="nav-link">
+                  <a class="link" href="">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="list list-contacts">
+              <li class="nav-contacts">
+                <a class="link nav-link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
               </li>
-              <li class="nav-link">
-                <a class="link link-fixed" href="./portfolio.html">Portfolio</a>
-              </li>
-              <li class="nav-link">
-                <a class="link" href="">Contacts</a>
+              <li class="nav-contacts">
+                <a class="link nav-link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
               </li>
             </ul>
-          </nav>
-
-          <ul class="list list-contacts">
-            <li class="nav-contacts">
-              <a class="link nav-link" href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="nav-contacts">
-              <a class="link nav-link" href="tel:+110001111111"
-                >+11 (000) 111-11-11</a
-              >
-            </li>
-          </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -83,7 +199,12 @@
               <a href="" class="services">
                 <div class="filtr-item">
                   <img
-                    src="./portfolio/banking-app-inteface-concept.jpg"
+                    srcset="
+                      ./portfolio/banking-app-inteface-concept/banking-app-inteface-concept-1x.webp 1x,
+                      ./portfolio/banking-app-inteface-concept/banking-app-inteface-concept-2x.webp 2x,
+                      ./portfolio/banking-app-inteface-concept/banking-app-inteface-concept-3x.webp 3x
+                    "
+                    src="./portfolio/banking-app-inteface-concept/banking-app-inteface-concept-1x.webp"
                     alt="Banking App Interface Concept"
                     width="360"
                     height="300"
@@ -97,8 +218,8 @@
                   </div>
                 </div>
                 <div class="filtr-text">
-                  <h3 class="title">Banking App Interface Concept</h3>
-                  <p class="text">App</p>
+                  <h3 class="filtr-title">Banking App Interface Concept</h3>
+                  <p class="filtr-title-text">App</p>
                 </div>
               </a>
             </li>
@@ -106,7 +227,12 @@
               <a href="" class="services">
                 <div class="filtr-item">
                   <img
-                    src="./portfolio/cashless-payment.jpg"
+                    srcset="
+                      ./portfolio/cashless-payment/cashless-payment-1x.webp 1x,
+                      ./portfolio/cashless-payment/cashless-payment-2x.webp 2x,
+                      ./portfolio/cashless-payment/cashless-payment-3x.webp 3x
+                    "
+                    src="./portfolio/cashless-payment/cashless-payment-1x.webp"
                     alt="Cashless payment"
                     width="360"
                     height="300"
@@ -120,8 +246,8 @@
                   </div>
                 </div>
                 <div class="filtr-text">
-                  <h3 class="title">Cashless Payment</h3>
-                  <p class="text">Marketing</p>
+                  <h3 class="filtr-title">Cashless Payment</h3>
+                  <p class="filtr-title-text">Marketing</p>
                 </div>
               </a>
             </li>
@@ -129,7 +255,12 @@
               <a href="" class="services">
                 <div class="filtr-item">
                   <img
-                    src="./portfolio/meditaion-app.jpg"
+                    srcset="
+                      ./portfolio/meditaion-app/meditaion-app-1x.webp 1x,
+                      ./portfolio/meditaion-app/meditaion-app-2x.webp 2x,
+                      ./portfolio/meditaion-app/meditaion-app-3x.webp 3x
+                    "
+                    src="./portfolio/meditaion-app/meditaion-app-1x.webp"
                     alt="Macbook and iphone"
                     width="360"
                     height="300"
@@ -144,7 +275,7 @@
                 </div>
                 <div class="filtr-text">
                   <h3 class="title">Meditaion App</h3>
-                  <p class="text">App</p>
+                  <p class="filtr-title-text">App</p>
                 </div>
               </a>
             </li>
@@ -152,7 +283,12 @@
               <a href="" class="services">
                 <div class="filtr-item">
                   <img
-                    src="./portfolio/taxi-service.jpg"
+                    srcset="
+                      ./portfolio/taxi-service/taxi-service-1x.webp 1x,
+                      ./portfolio/taxi-service/taxi-service-2x.webp 2x,
+                      ./portfolio/taxi-service/taxi-service-3x.webp 3x
+                    "
+                    src="./portfolio/taxi-service/taxi-service-1x.webp"
                     alt="Taxi service"
                     width="360"
                     height="300"
@@ -167,7 +303,7 @@
                 </div>
                 <div class="filtr-text">
                   <h3 class="title">Taxi Service</h3>
-                  <p class="text">Marketing</p>
+                  <p class="filtr-title-text">Marketing</p>
                 </div>
               </a>
             </li>
@@ -175,7 +311,12 @@
               <a href="" class="services">
                 <div class="filtr-item">
                   <img
-                    src="./portfolio/screen-illustrations.jpg"
+                    srcset="
+                      ./portfolio/screen-illustrations/screen-illustrations-1x.webp 1x,
+                      ./portfolio/screen-illustrations/screen-illustrations-2x.webp 2x,
+                      ./portfolio/screen-illustrations/screen-illustrations-3x.webp 3x
+                    "
+                    src="./portfolio/screen-illustrations/screen-illustrations-1x.webp"
                     alt="Screen illustrations"
                     width="360"
                     height="300"
@@ -190,7 +331,7 @@
                 </div>
                 <div class="filtr-text">
                   <h3 class="title">Screen Illustrations</h3>
-                  <p class="text">Design</p>
+                  <p class="filtr-title-text">Design</p>
                 </div>
               </a>
             </li>
@@ -198,7 +339,12 @@
               <a href="" class="services">
                 <div class="filtr-item">
                   <img
-                    src="./portfolio/online-courses.jpg"
+                    srcset="
+                      ./portfolio/online-courses/online-courses-1x.webp 1x,
+                      ./portfolio/online-courses/online-courses-2x.webp 2x,
+                      ./portfolio/online-courses/online-courses-3x.webp 3x
+                    "
+                    src="./portfolio/online-courses/online-courses-1x.webp"
                     alt="Smiling girl"
                     width="360"
                     height="300"
@@ -213,7 +359,7 @@
                 </div>
                 <div class="filtr-text">
                   <h3 class="title">Online Courses</h3>
-                  <p class="text">Marketing</p>
+                  <p class="filtr-title-text">Marketing</p>
                 </div>
               </a>
             </li>
@@ -221,7 +367,12 @@
               <a href="" class="services">
                 <div class="filtr-item">
                   <img
-                    src="./portfolio/instagram-stories-concept.jpg"
+                    srcset="
+                      ./portfolio/instagram-stories-concept/instagram-stories-concept-1x.webp 1x,
+                      ./portfolio/instagram-stories-concept/instagram-stories-concept-2x.webp 2x,
+                      ./portfolio/instagram-stories-concept/instagram-stories-concept-3x.webp 3x
+                    "
+                    src="./portfolio/instagram-stories-concept/instagram-stories-concept-1x.webp"
                     alt="Instagram page is open on the phone"
                     width="360"
                     height="300"
@@ -236,7 +387,7 @@
                 </div>
                 <div class="filtr-text">
                   <h3 class="title">Instagram Stories Concept</h3>
-                  <p class="text">Design</p>
+                  <p class="filtr-title-text">Design</p>
                 </div>
               </a>
             </li>
@@ -244,7 +395,12 @@
               <a href="" class="services">
                 <div class="filtr-item">
                   <img
-                    src="./portfolio/organic-food.jpg"
+                    srcset="
+                      ./portfolio/organic-food/organic-food-1x.webp 1x,
+                      ./portfolio/organic-food/organic-food-2x.webp 2x,
+                      ./portfolio/organic-food/organic-food-3x.webp 3x
+                    "
+                    src="./portfolio/organic-food/organic-food-1x.webp"
                     alt="A woman carries groceries"
                     width="360"
                     height="300"
@@ -259,7 +415,7 @@
                 </div>
                 <div class="filtr-text">
                   <h3 class="title">Organic Food</h3>
-                  <p class="text">Web Site</p>
+                  <p class="filtr-title-text">Web Site</p>
                 </div>
               </a>
             </li>
@@ -267,7 +423,12 @@
               <a href="" class="services">
                 <div class="filtr-item">
                   <img
-                    src="./portfolio/fresh-coffee.jpg"
+                    srcset="
+                      ./portfolio/fresh-coffee/fresh-coffee-1x.webp 1x,
+                      ./portfolio/fresh-coffee/fresh-coffee-2x.webp 2x,
+                      ./portfolio/fresh-coffee/fresh-coffee-3x.webp 3x
+                    "
+                    src="./portfolio/fresh-coffee/fresh-coffee-1x.webp"
                     alt="Fresh coffee"
                     width="360"
                     height="300"
@@ -282,7 +443,7 @@
                 </div>
                 <div class="filtr-text">
                   <h3 class="title">Fresh Coffee</h3>
-                  <p class="text">Web Site</p>
+                  <p class="filtr-title-text">Web Site</p>
                 </div>
               </a>
             </li>
@@ -369,6 +530,7 @@
                 id="subscribe"
                 placeholder="E-mail"
                 class="footer-input"
+                required
               />
             </div>
             <button class="button footer-btn" type="submit">
@@ -381,5 +543,7 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js" defer></script>
+    <script src="./js/mobile-menu.js" defer></script>
   </body>
 </html>

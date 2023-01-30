@@ -26,14 +26,118 @@
             <a href="./index.html" class="logo nav-logo"
               ><span class="web">web</span>studio</a
             >
-            <button type="button" class="nav-btn">
+            <button
+              type="button"
+              class="nav-btn"
+              aria-controls="menu-container"
+              aria-expanded="false"
+              js-menu-container
+              js-open-menu
+            >
               <svg class="nav-icon" width="40" height="30">
                 <use href="./images/svg/sprite.svg#icon-menu"></use>
               </svg>
             </button>
           </div>
-          <div class="nav-header">
-            <nav>
+          <!-- Mobile menu -->
+          <div class="nav-header" id="menu-container" js-container-dropdown>
+            <button
+              type="button"
+              class="modal-button button-close"
+              aria-lebel="Mobile menu switch"
+              js-close-menu
+            >
+              <svg width="8px" height="8px">
+                <use href="./images/svg/sprite.svg#close-icon"></use>
+              </svg>
+            </button>
+            <div class="nav-mob-menu">
+              <nav class="nav-item">
+                <ul class="list nav-list">
+                  <li class="nav-link">
+                    <a class="link link-fixed" href="./index.html">Studio</a>
+                  </li>
+                  <li class="nav-link">
+                    <a class="link" href="./portfolio.html">Portfolio</a>
+                  </li>
+                  <li class="nav-link">
+                    <a class="link" href="">Contacts</a>
+                  </li>
+                </ul>
+              </nav>
+              <ul class="list list-contacts">
+                <li class="nav-contacts nav-tel">
+                  <a class="link nav-link" href="tel:+110001111111"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+                <li class="nav-contacts nav-mail">
+                  <a class="link nav-link" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <ul class="list team-icon-list nav-icon">
+                  <li>
+                    <a
+                      href="https://www.instagram.com/"
+                      class="team-link nav-icon-list"
+                      aria-label="Instagram"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="team-icon-svg" width="24px" height="24px">
+                        <use
+                          href="./images/svg/sprite.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://twitter.com/"
+                      class="team-link nav-icon-list"
+                      aria-label="Twitter"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="team-icon-svg" width="24px" height="24px">
+                        <use href="./images/svg/sprite.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.facebook.com/"
+                      class="team-link nav-icon-list"
+                      aria-label="Facebook"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="team-icon-svg" width="24px" height="24px">
+                        <use href="./images/svg/sprite.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/"
+                      class="team-link nav-icon-list"
+                      aria-label="Linkedin"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <svg class="team-icon-svg" width="24px" height="24px">
+                        <use href="./images/svg/sprite.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+          </div>
+          <!-- tablet/desktop menu -->
+          <div class="nav-header tab-menu">
+            <nav class="nav-item">
               <ul class="list nav-list">
                 <li class="nav-link">
                   <a class="link link-fixed" href="./index.html">Studio</a>
@@ -84,7 +188,7 @@
                   <use href="./images/svg/sprite.svg#icon-antenna"></use>
                 </svg>
               </div>
-              <h3 class="title">Strategy</h3>
+              <h3 class="strengths-title">Strategy</h3>
               <p class="text">
                 Our goal is to identify the business problem to walk away with
                 the perfect and creative solution.
@@ -96,7 +200,7 @@
                   <use href="./images/svg/sprite.svg#icon-clock"></use>
                 </svg>
               </div>
-              <h3 class="title">Punctuality</h3>
+              <h3 class="strengths-title">Punctuality</h3>
               <p class="text">
                 Bring the key message to the brand's audience for the best price
                 within the shortest possible time.
@@ -108,7 +212,7 @@
                   <use href="./images/svg/sprite.svg#icon-diagram"></use>
                 </svg>
               </div>
-              <h3 class="title">Diligence</h3>
+              <h3 class="strengths-title">Diligence</h3>
               <p class="text">
                 Research and confirm brands that present the strongest digital
                 growth opportunities and minimize risk.
@@ -120,7 +224,7 @@
                   <use href="./images/svg/sprite.svg#icon-astronaut"></use>
                 </svg>
               </div>
-              <h3 class="title">Technologies</h3>
+              <h3 class="strengths-title">Technologies</h3>
               <p class="text">
                 Design practice focused on digital experiences. We bring forth a
                 deep passion for problem-solving.
@@ -715,6 +819,7 @@
         </form>
       </div>
     </div>
-    <script src="./js/modal.js"></script>
+    <script src="./js/modal.js" defer></script>
+    <script src="./js/mobile-menu.js" defer></script>
   </body>
 </html>

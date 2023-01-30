@@ -32,11 +32,11 @@ body {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 .container {
-  width: 448px;
+  max-width: 428px;
   padding-left: 16px;
   padding-right: 16px;
   margin: 0 auto;
@@ -68,11 +68,12 @@ img {
   align-items: center;
   justify-content: space-between;
 }
-.nav-header {
+.tab-menu {
   display: none;
 }
 
 .logo,
+.link,
 .services,
 .overlay-text {
   color: inherit;
@@ -81,6 +82,17 @@ img {
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
+}
+.link {
+  transition: color var(--main-transition);
+}
+
+.link:hover,
+.link:focus {
+  color: var(--hover-blue);
+}
+.link-fixed {
+  color: var(--hover-blue);
 }
 
 .nav-logo,
@@ -190,7 +202,7 @@ img {
   text-align: center;
 }
 
-.title {
+.strengths-title {
   margin: 0 auto;
   margin-bottom: 8px;
 
@@ -603,4 +615,174 @@ img {
 }
 .modal-btn {
   margin: 0 auto;
+}
+/* PORTFOLIO */
+.filtr {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.buttons {
+  padding: 12px 24px;
+  border-radius: 4px;
+  border: none;
+
+  background-color: var(--light);
+  border: 1px solid var(--accent);
+  color: var(--primary-brand);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.004em;
+  cursor: pointer;
+
+  transition: background-color var(--main-transition),
+    color var(--main-transition), border var(--main-transition);
+}
+.buttons:hover,
+.buttons:focus {
+  background-color: var(--primary-brand);
+  border: 1px solid var(--primary-brand);
+  color: var(--white);
+}
+.list-btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-bottom: 48px;
+}
+
+.filtr-btn {
+  margin-right: 24px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+
+  transition: box-shadow var(--main-transition);
+}
+.filtr-btn:nth-last-child(-n + 2) {
+  margin-bottom: 0;
+}
+.filtr-btn:nth-child(3n) {
+}
+.filtr-btn:hover,
+.filtr-btn:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.filtr-card {
+  position: relative;
+}
+.filtr-list {
+  margin-bottom: 48px;
+  border: 0.5px solid var(--light);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+
+  transition: box-shadow var(--main-transition);
+}
+.filtr-list:hover,
+.filtr-list:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.filtr-item {
+  overflow: hidden;
+  position: relative;
+}
+.filtr-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  background-color: var(--primary-brand);
+  transform: translateY(100%);
+  transition: transform var(--main-transition);
+}
+.services:hover .filtr-overlay,
+.services:focus .filtr-overlay {
+  transform: translateY(0);
+}
+.overlay-text {
+  padding: 40px 32px 164px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--light);
+}
+
+.filtr-text {
+  padding: 32px 16px;
+}
+.filtr-title {
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.filtr-title-text {
+  font-weight: 400;
+}
+
+@media screen and (max-width: 767px) {
+  .line {
+    position: relative;
+  }
+  .nav-header {
+    display: block;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1;
+    overflow: scroll;
+
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+
+    background-color: var(--white);
+
+    transform: translateX(100%);
+    transition: transform var(--main-transition);
+  }
+  .nav-header.is-open {
+    transform: translateX(0);
+
+    transition: transform var(--main-transition);
+  }
+  .button-close {
+    margin-bottom: 16px;
+  }
+  .nav-mob-menu {
+    display: flex;
+    height: 94%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .nav-list {
+    font-weight: 700;
+    font-size: 36px;
+  }
+  .nav-link:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .nav-tel {
+    font-weight: 600;
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  .nav-mail {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 48px;
+    width: 337px;
+  }
+  .nav-icon {
+    max-width: 328px;
+    gap: 56px;
+  }
+  .nav-icon-list {
+    padding: 8px;
+  }
 }
