@@ -36,10 +36,11 @@ img {
   height: auto;
 }
 .container {
-  max-width: 428px;
+  max-width: 426px;
   padding-left: 16px;
   padding-right: 16px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .secret-name {
   position: absolute;
@@ -449,8 +450,8 @@ img {
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--main-transition);
 
-  min-width: 408px;
-  min-height: 579px;
+  max-width: 398px;
+  width: 95%;
   padding: 24px;
 
   background-color: #fcfcfc;
@@ -627,24 +628,11 @@ img {
   border: 1px solid var(--primary-brand);
   color: var(--white);
 }
-.list-btn {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-  margin-bottom: 48px;
-}
 
 .filtr-btn {
-  margin-right: 24px;
-  margin-bottom: 16px;
   border-radius: 4px;
 
   transition: box-shadow var(--main-transition);
-}
-.filtr-btn:nth-last-child(-n + 2) {
-  margin-bottom: 0;
-}
-.filtr-btn:nth-child(3n) {
 }
 .filtr-btn:hover,
 .filtr-btn:focus {
@@ -655,7 +643,6 @@ img {
   position: relative;
 }
 .filtr-list {
-  margin-bottom: 48px;
   border: 0.5px solid var(--light);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -790,6 +777,22 @@ img {
   .footer-subscribe {
     margin-bottom: 16px;
   }
+  .list-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-bottom: 48px;
+  }
+  .filtr-btn {
+    margin-right: 24px;
+    margin-bottom: 16px;
+  }
+  .filtr-btn:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+  .filtr-list {
+    margin-bottom: 48px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -844,6 +847,14 @@ img {
   }
   .footer-input {
     min-width: 264px;
+  }
+  .list-btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 72px;
+  }
+  .filtr-btn:not(:last-child) {
+    margin-right: 24px;
   }
 }
 
@@ -938,6 +949,20 @@ img {
   }
   .footer-subscribe {
     margin-right: 24px;
+  }
+  .filtr-card {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .filtr-list {
+    width: calc((100% - 24px) / 2);
+    margin-bottom: 72px;
+  }
+  .filtr-list:nth-child(odd) {
+    margin-right: 24px;
+  }
+  .filtr-list:nth-last-child(-n + 2) {
+    margin-bottom: 0;
   }
 }
 

@@ -40,7 +40,11 @@
             </button>
           </div>
           <!-- Mobile menu -->
-          <div class="nav-header" id="menu-container" js-container-dropdown>
+          <div
+            class="nav-header mobile-menu"
+            id="menu-container"
+            js-container-dropdown
+          >
             <button
               type="button"
               class="modal-button button-close"
@@ -55,12 +59,10 @@
               <nav class="nav-item">
                 <ul class="list nav-list">
                   <li class="nav-link">
-                    <a class="link" href="./index.html">Studio</a>
+                    <a class="link link-fixed" href="./index.html">Studio</a>
                   </li>
                   <li class="nav-link">
-                    <a class="link link-fixed" href="./portfolio.html"
-                      >Portfolio</a
-                    >
+                    <a class="link" href="./portfolio.html">Portfolio</a>
                   </li>
                   <li class="nav-link">
                     <a class="link" href="">Contacts</a>
@@ -138,30 +140,30 @@
             </div>
           </div>
           <!-- tablet/desktop menu -->
-          <div class="tab-menu">
+          <div class="nav-header tab-menu">
             <nav class="nav-item">
               <ul class="list nav-list">
                 <li class="nav-link">
-                  <a class="link" href="./index.html">Studio</a>
+                  <a class="link link-fixed" href="./index.html">Studio</a>
                 </li>
                 <li class="nav-link">
-                  <a class="link link-fixed" href="./portfolio.html"
-                    >Portfolio</a
-                  >
+                  <a class="link" href="./portfolio.html">Portfolio</a>
                 </li>
                 <li class="nav-link">
                   <a class="link" href="">Contacts</a>
                 </li>
               </ul>
             </nav>
-            <ul class="list list-contacts">
+          </div>
+          <div class="list-contacts tab-menu">
+            <ul class="list">
               <li class="nav-contacts">
-                <a class="link nav-link" href="mailto:info@devstudio.com"
+                <a class="link nav-mail" href="mailto:info@devstudio.com"
                   >info@devstudio.com</a
                 >
               </li>
               <li class="nav-contacts">
-                <a class="link nav-link" href="tel:+110001111111"
+                <a class="link nav-tel" href="tel:+110001111111"
                   >+11 (000) 111-11-11</a
                 >
               </li>
@@ -453,7 +455,7 @@
     </main>
 
     <footer class="dark-bg">
-      <div class="container footer-container">
+      <div class="container footer-container tablet-container">
         <div class="footer-info">
           <a href="./index.html" class="logo footer-logo"
             ><span class="web">web</span><span class="studio">studio</span></a
