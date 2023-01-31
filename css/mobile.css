@@ -772,7 +772,8 @@ img {
   }
   .footer-container,
   .footer-info {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   .footer-mail {
     width: 100%;
