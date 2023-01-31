@@ -460,8 +460,7 @@ img {
   margin-left: auto;
   margin-bottom: 24px;
 
-  width: 24px;
-  height: 24px;
+  padding: 8px;
 
   background: var(--accent);
   border: 1px solid transparent;
