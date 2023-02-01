@@ -943,6 +943,9 @@ img {
   .customers-link {
     padding: 16px 32px;
   }
+  .customers-list-mob {
+    display: none;
+  }
   .filtr-btn:not(:last-child) {
     margin-right: 24px;
   }
