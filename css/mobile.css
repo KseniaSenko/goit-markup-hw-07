@@ -813,12 +813,6 @@ img {
   .strengths-title {
     text-align: center;
   }
-  .customers-list-desktop {
-    display: none;
-  }
-  .customers-list-tablet {
-    display: none;
-  }
   .customers-list {
     flex-wrap: wrap;
   }
@@ -944,6 +938,9 @@ img {
     justify-content: center;
     margin-bottom: 72px;
   }
+  .customers-link {
+    padding: 16px 32px;
+  }
   .filtr-btn:not(:last-child) {
     margin-right: 24px;
   }
@@ -1026,9 +1023,6 @@ img {
   .team-item:nth-last-child(-n + 2) {
     margin-bottom: 0;
   }
-  .customers-list-desktop {
-    display: none;
-  }
   .customers-list {
     flex-wrap: wrap;
   }
@@ -1043,11 +1037,7 @@ img {
   .customers-item:nth-last-child(-n + 3) {
     margin-bottom: 0;
   }
-  .customers-link {
-    padding: 16px 20px;
-  }
-  .customers-list-mob,
-  .customers-list-desktop {
+  .customers-list-mob {
     display: none;
   }
   .footer-container {
@@ -1121,9 +1111,6 @@ img {
   .list-contacts {
     margin-left: auto;
   }
-
-  /* HERO */
-
   .hero {
     padding-top: 192px;
     padding-bottom: 192px;
@@ -1144,7 +1131,6 @@ img {
     padding-top: 120px;
     padding-bottom: 120px;
   }
-
   .list.main-list {
     display: flex;
     padding-left: 0;
@@ -1196,12 +1182,6 @@ img {
   }
   .customers-list-mob {
     display: none;
-  }
-  .customers-list-tablet {
-    display: none;
-  }
-  .customers-link {
-    padding: 16px 32px;
   }
   .customers-item:not(:last-child) {
     margin-right: 24px;
