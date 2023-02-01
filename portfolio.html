@@ -34,24 +34,20 @@
               js-menu-container
               js-open-menu
             >
-              <svg class="nav-icon" width="40" height="30">
+              <svg class="nav-icon" width="30" height="30">
                 <use href="./images/svg/sprite.svg#icon-menu"></use>
               </svg>
             </button>
           </div>
           <!-- Mobile menu -->
-          <div
-            class="nav-header mobile-menu"
-            id="menu-container"
-            js-container-dropdown
-          >
+          <div class="mobile-menu" id="menu-container" js-container-dropdown>
             <button
               type="button"
-              class="modal-button button-close"
+              class="button-close"
               aria-lebel="Mobile menu switch"
               js-close-menu
             >
-              <svg width="8px" height="8px">
+              <svg width="20px" height="20px">
                 <use href="./images/svg/sprite.svg#close-icon"></use>
               </svg>
             </button>
@@ -59,13 +55,17 @@
               <nav class="nav-item">
                 <ul class="list nav-list">
                   <li class="nav-link">
-                    <a class="link link-fixed" href="./index.html">Studio</a>
+                    <a class="link nav-pointer link-fixed" href="./index.html"
+                      >Studio</a
+                    >
                   </li>
                   <li class="nav-link">
-                    <a class="link" href="./portfolio.html">Portfolio</a>
+                    <a class="link nav-pointer" href="./portfolio.html"
+                      >Portfolio</a
+                    >
                   </li>
                   <li class="nav-link">
-                    <a class="link" href="">Contacts</a>
+                    <a class="link nav-pointer" href="">Contacts</a>
                   </li>
                 </ul>
               </nav>
@@ -144,12 +144,10 @@
             <nav class="nav-item">
               <ul class="list nav-list">
                 <li class="nav-link">
-                  <a class="link" href="./index.html">Studio</a>
+                  <a class="link link-fixed" href="./index.html">Studio</a>
                 </li>
                 <li class="nav-link">
-                  <a class="link link-fixed" href="./portfolio.html"
-                    >Portfolio</a
-                  >
+                  <a class="link" href="./portfolio.html">Portfolio</a>
                 </li>
                 <li class="nav-link">
                   <a class="link" href="">Contacts</a>
