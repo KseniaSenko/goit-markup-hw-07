@@ -1142,3 +1142,20 @@ img {
       url(../images/bcg-img/people-office-2x.webp);
   }
 }
+
+@media screen and (max-height: 500px) {
+  .nav-pointer {
+    font-size: 30px;
+  }
+
+  .nav-link {
+    margin-bottom: 30px;
+  }
+  .nav-tel {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  .nav-mail {
+    margin-bottom: 30px;
+  }
+}
