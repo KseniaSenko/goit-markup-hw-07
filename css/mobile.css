@@ -820,7 +820,9 @@ img {
     width: calc((100% - 16px) / 2);
     margin-bottom: 72px;
   }
-
+  .customers-list-desktop {
+    display: none;
+  }
   .customers-item:nth-child(odd) {
     margin-right: 16px;
   }
